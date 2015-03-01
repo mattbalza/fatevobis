@@ -4,7 +4,16 @@
 
 body { padding-top: 70px; font-family: 'Droid Sans', sans-serif; }
 
+.section-header {
+text-align: center;
+padding-bottom: 75px;
+}
+
 h1, h2, h3 { font-family: 'Raleway', sans-serif; }
+
+h5 {
+font-size: 17px;
+}
 
 .section-header h2 {
 padding-bottom: 10px;
@@ -21,17 +30,31 @@ h2 {
 font-size: 45px !important;
 line-height: 55px;
 }
-section-title {
+
+h2.section-title {
 font-family: 'Montserrat', 'sans-serif';
 font-weight: 700;
 text-transform: uppercase;
 }
 
-#home, #services, #portfolio, #about, #team, #testimonials, #contacts, #features { padding-top: 70px; }
+.section-header h6 {
+font-size: 16px;
+}
+
+#home, #services, #about, #team, #testimonials, #contacts, #features { padding-top: 70px; padding-bottom:70px; }
 
 .row {
 margin-left: 0;
 margin-right: 0;
+}
+
+audio, canvas, progress, video {
+display: inline-block;
+vertical-align: baseline;
+}
+
+.skills .skill .skill1, .skill2, .skill3, .skill4 {
+font-size: 16px !important;
 }
 
 /*==========  / UNIVERSALI  ==========*/
@@ -118,6 +141,26 @@ margin-bottom: -17px;
 
 /*==========  FEATURES  ==========*/
 
+.features {
+    position: relative;
+    z-index: 1;
+}
+
+#features .features-bg {
+position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background: url(back1.jpg) center center no-repeat;
+    opacity: .3;
+    width: 100%;
+    height: 100%;
+}
+
 .features .feature {
 margin-bottom: 55px;
 }
@@ -135,7 +178,68 @@ margin-right: 25px;
 
 #about { 
   background-color: #272727;
+  text-align:center;
   color: #fff;
+}
+
+.about-us {
+background: #272727;
+color: #FFF;
+padding-bottom: 100px;
+}
+
+.about-us .column {
+margin-bottom: 78px;
+}
+
+.about-us .big-intro {
+text-align: right;
+font-weight: 300;
+font-size: 60px;
+line-height: normal;
+margin-top: -15px;
+}
+
+.about-us p {
+text-align: left;
+color: #939393;
+}
+
+.skills {
+text-align: left;
+}
+
+.skills .skill {
+display: block;
+clear: both;
+margin-top: 0;
+margin-bottom: 25px;
+}
+
+.skills .skill .skill-count {
+display: inline-block;
+height: 64px;
+margin-top: 3px;
+float: left;
+margin-right: 15px;
+margin-bottom: 25px;
+}
+
+.our-clients {
+background: url("lines-dark.png") repeat-x center;
+margin-bottom: 40px;
+}
+
+.our-clients h5 {
+font-weight: 700;
+}
+
+.client-list li { list-style:none;}
+
+.our-clients .section-footer-title {
+background: #272727;
+padding: 0 15px;
+color: #FFF;
 }
 
 /*==========  / ABOUT  ==========*/
@@ -205,12 +309,17 @@ margin: 5px;
 
     /*--- Small Devices, Tablets ---*/
     @media only screen and (min-width : 768px) {
-
+.container {
+width: 750px;
+}
     }
 
     /*--- Medium Devices, Desktops ---*/
     @media only screen and (min-width : 992px) {
 
+.container {
+width: 970px;
+}
     }
 
     /*--- Large Devices, Wide Screens ---*/
@@ -243,7 +352,9 @@ margin: 5px;
          font-size:90px; 
          color:#1c375b;
       }
-
+      .container {
+        width: 1170px;
+      }
 
 
     }
